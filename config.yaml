@@ -1,0 +1,84 @@
+profile:
+  name: "Your Name"
+  email: "your@email.com"
+  current_role: "AI/ML Engineer"
+  years_of_experience: 2
+  bio: >
+    I am an AI/ML engineer with experience building LLM-powered applications,
+    RAG pipelines, and agentic systems using LangGraph and LangChain.
+  skills:
+    - Python
+    - LangGraph
+    - LangChain
+    - RAG
+    - LLMs
+    - MCP
+    - FastAPI
+    - PostgreSQL
+    - Docker
+  linkedin_url: "https://linkedin.com/in/your-profile"
+  github_url: "https://github.com/your-username"
+
+message:
+  tone: "professional"          # professional | casual | concise
+  max_length_words: 80
+  sign_off: "Best regards"
+  highlight_skills:             # top 3 skills to mention in outreach
+    - LLMs
+    - RAG pipelines
+    - agentic systems
+
+location:
+  # Jobs must match at least one of these to pass the filter.
+  # Add or remove values to control what gets included.
+  allowed_locations:
+    - "India"
+    - "Bangalore"
+    - "Mumbai"
+    - "Delhi"
+    - "Hyderabad"
+    - "Pune"
+    - "Chennai"
+    - "Remote"           # remove this line if you want onsite/hybrid only
+  work_modes:
+    - "onsite"
+    - "hybrid"
+    - "remote"           # remove this line if you want onsite/hybrid only
+
+roles:
+  # Jobs must match at least one of these keywords (case-insensitive) to pass the filter.
+  allowed_keywords:
+    - "AI Engineer"
+    - "ML Engineer"
+    - "Machine Learning"
+    - "LLM"
+    - "NLP"
+    - "Generative AI"
+    - "GenAI"
+    - "Deep Learning"
+    - "Backend Engineer"
+    - "Software Engineer"
+  blocked_keywords:        # jobs matching any of these are dropped immediately
+    - "HR"
+    - "Sales"
+    - "Business Analyst"
+    - "Data Analyst"
+    - "Marketing"
+    - "Finance"
+    - "Accountant"
+    - "Customer Support"
+
+jobs:
+  max_results_per_source: 50   # how many raw jobs to fetch from each API
+  top_n: 30                    # how many jobs to keep after filtering + dedup
+
+contact_discovery:
+  max_contacts_per_company: 3  # max people to find per company
+  target_roles:                # what kind of people to search for
+    - "recruiter"
+    - "hiring manager"
+    - "engineering manager"
+    - "CTO"
+    - "founder"
+    - "VP Engineering"
+    - "Head of Engineering"
