@@ -69,8 +69,16 @@ roles:
     - "Customer Support"
 
 jobs:
-  max_results_per_source: 50   # how many raw jobs to fetch from each API
+  search_queries:              # queries sent to each job source
+    - "AI Engineer"
+    - "ML Engineer"
+    - "LLM Engineer"
+  max_results_per_source: 50   # how many raw jobs to fetch from each API per query
   top_n: 30                    # how many jobs to keep after filtering + dedup
+
+llm:
+  model: "gemini-2.0-flash"    # Gemini model to use for filtering and generation
+  temperature: 0
 
 contact_discovery:
   max_contacts_per_company: 3  # max people to find per company
