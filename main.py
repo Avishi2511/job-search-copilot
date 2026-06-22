@@ -29,10 +29,13 @@ async def run_pipeline():
     print("Starting job search pipeline...\n")
     result = await graph.ainvoke(initial_state)
 
+    from datetime import date
+    output_path = f"output/jobs_{date.today().isoformat()}.xlsx"
     print(f"\nPipeline complete.")
     print(f"  Raw jobs fetched : {len(result['raw_jobs'])}")
     print(f"  After filtering  : {len(result['filtered_jobs'])}")
     print(f"  New (not seen)   : {len(result['new_jobs'])}")
+    print(f"  Excel exported   : {output_path}")
     return result
 
 
